@@ -11,5 +11,6 @@ async def export_to_json():
         with open('addresses.json', 'w') as f:
             json.dump(data, f, indent=4)
 
+
 if __name__ == "__main__":
     asyncio.run(export_to_json())

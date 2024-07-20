@@ -1,3 +1,4 @@
+import asyncio
 from pytoniq_core import BlockIdExt
 
 

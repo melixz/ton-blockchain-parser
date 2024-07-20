@@ -9,7 +9,7 @@ from handle_block import handle_block
 async def main():
     await init_db()
     db_pool = await get_db_pool()
-    client = LiteClient.from_mainnet_config(ls_i=0, trust_level=2, timeout=15)
+    client = LiteClient.from_mainnet_config(ls_i=14, trust_level=0, timeout=20)
     await client.connect()
 
     scanner = BlockScanner(client=client, block_handler=lambda block: handle_block(block, client, db_pool))
