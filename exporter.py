@@ -8,7 +8,7 @@ async def export_to_json():
     async with db_pool.acquire() as conn:
         addresses = await conn.fetch("SELECT * FROM addresses")
         data = [dict(record) for record in addresses]
-        with open('addresses.json', 'w') as f:
+        with open("addresses.json", "w") as f:
             json.dump(data, f, indent=4)
 
 
